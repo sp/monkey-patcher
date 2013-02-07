@@ -1,0 +1,38 @@
+{
+    "name": "monkey-patcher",
+    "description": "Utility for automating monkey patching of global and external module functions.",
+    "version": "1.0.5",
+    "main": "./index.js",
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ],
+
+    "dependencies": {
+    },
+
+    "devDependencies": {
+        "testpilot": ">=0.2.2"
+    },
+
+    "engines": {
+        "node": ">=0.4.6"
+    },
+
+    "scripts": {
+        "test": "testpilot testing/tests"
+    },
+
+    "author": {
+        "name": "Seth Purcell",
+        "email": "kaioptera@gmail.com"
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/sp/monkey-patcher.git"
+    }
+}
