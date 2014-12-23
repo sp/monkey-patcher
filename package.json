@@ -1,7 +1,7 @@
 {
     "name": "monkey-patcher",
     "description": "Utility for automating monkey patching of global and external module functions.",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "main": "./index.js",
 
     "licenses": [
@@ -14,21 +14,12 @@
     "dependencies": {
     },
 
-    "devDependencies": {
-        "testpilot": ">=0.2.2"
-    },
-
     "engines": {
         "node": ">=0.4.6"
     },
 
-    "scripts": {
-        "test": "testpilot testing/tests"
-    },
-
     "author": {
-        "name": "Seth Purcell",
-        "email": "kaioptera@gmail.com"
+        "name": "Chris Osborn"
     },
 
     "repository": {
