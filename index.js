@@ -105,13 +105,14 @@ MonkeyPatcher.prototype.wrap = function(object, attr, method) {
     }
     var wrapped = object[attr];
     this.patch(object, attr, function() {
-        Object.defineProperty(this, 'wrappedMethod', {
+        var that = this || {};
+        Object.defineProperty(that, 'wrappedMethod', {
             'value': wrapped,
             'enumerable': false,
             'configurable': true
         });
-        var ret = method.apply(this, arguments);
-        delete this.wrappedMethod;
+        var ret = method.apply(that, arguments);
+        delete that.wrappedMethod;
         return ret;
     });
 };
