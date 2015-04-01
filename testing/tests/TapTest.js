@@ -9,6 +9,7 @@ exports.success = function(test) {
             test.equal(this, obj);
             test.equal(arg1, '<arg1>');
             test.equal(arg2, '<arg2>');
+            return '<return-value>';
         }
     };
 
@@ -18,7 +19,7 @@ exports.success = function(test) {
         test.equal(arg2, '<arg2>');
     });
 
-    test.expect(6);
-    obj.method('<arg1>', '<arg2>');
+    test.expect(7);
+    test.equal(obj.method('<arg1>', '<arg2>'), '<return-value>');
     test.done();
 };
