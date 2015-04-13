@@ -125,6 +125,28 @@ MonkeyPatcher.wrap = function() {
 };
 
 /**
+ * Like wrap(), but automatically invokes the original method with the original
+ * arguments after the patch method.
+ *
+ * @param object
+ * @param attr
+ * @param method
+ */
+MonkeyPatcher.prototype.tap = function(object, attr, method) {
+    this.wrap(object, attr, function() {
+        method.apply(this, arguments);
+        return this.wrappedMethod.apply(this, arguments);
+    });
+};
+
+MonkeyPatcher.tap = function() {
+    if (!mp_singleton) {
+        throw new Error('MonkeyPatcher is not set up');
+    }
+    return mp_singleton.tap.apply(mp_singleton, arguments);
+};
+
+/**
  * Tear down this MonkeyPatcher, removing all patches and restoring
  * the patched objects to their original states.
  */
