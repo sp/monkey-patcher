@@ -1,29 +1,23 @@
 {
-    "name": "monkey-patcher",
-    "description": "Utility for automating monkey patching of global and external module functions.",
-    "version": "1.0.6",
-    "main": "./index.js",
-
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://www.opensource.org/licenses/mit-license.php"
-        }
-    ],
-
-    "dependencies": {
-    },
-
-    "engines": {
-        "node": ">=0.4.6"
-    },
-
-    "author": {
-        "name": "Chris Osborn"
-    },
-
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/sp/monkey-patcher.git"
+  "name": "monkey-patcher",
+  "description": "Utility for automating monkey patching of global and external module functions.",
+  "version": "1.1.0",
+  "main": "./index.js",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
     }
+  ],
+  "dependencies": {},
+  "engines": {
+    "node": ">=0.4.6"
+  },
+  "author": {
+    "name": "Chris Osborn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sp/monkey-patcher.git"
+  }
 }
